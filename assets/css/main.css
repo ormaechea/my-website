@@ -2505,6 +2505,10 @@
 				width: 100%;
 			}
 
+			.hover{
+
+			}
+
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
 			-moz-order: 2;
@@ -3775,6 +3779,7 @@
 
 		/* HERO */
 
+/* hero2 */
 			body.landing #hero2 {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/class.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/class.jpg");
@@ -3790,6 +3795,25 @@
 	body.is-mobile.landing #page-wrapper {
 		background: none;
 	}
+
+	/* hero3 */
+			body.landing #hero3 {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/post_its.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/post_its.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/post_its.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/post_its.jpg");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
+	}
+
+	body.is-mobile.landing #page-wrapper {
+		background: none;
+	}
+
+
 
 
 /* Landing */
@@ -3829,3 +3853,46 @@
 		background-color: #1d242a;
 	}
 
+/* FLIP ANIMATION*/
+/* entire container, keeps perspective */
+/*.flip-container {
+	perspective: 1000;
+}*/
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+/*.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+*/
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+/*	position: relative;*/
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+}
+
+/* front pane, placed above back */
+.front {
+	/*z-index: 2;*/
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
