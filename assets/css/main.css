@@ -2517,6 +2517,7 @@
 			order: 2;
 			max-width: 48em;
 			width: 60%;
+			text-align: left;
 		}
 
 		.spotlight:nth-child(2n) {
@@ -3814,15 +3815,13 @@
 	}
 
 
-
-
 /* Landing */
 
 	body.landing #page-wrapper {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3832,6 +3831,7 @@
 
 	body.landing #footer {
 		background-color: rgba(29, 36, 42, 0.9);
+
 	}
 
 	body.is-mobile.landing #page-wrapper {
@@ -3840,10 +3840,10 @@
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/golf.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/golf.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/golf.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/golf.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/scene.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -3853,46 +3853,61 @@
 		background-color: #1d242a;
 	}
 
-/* FLIP ANIMATION*/
-/* entire container, keeps perspective */
-/*.flip-container {
-	perspective: 1000;
-}*/
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
+
+	/* Footer Background Overwritten*/
+
+	#cta .wrapper .style4{
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/post_its.jpg");
 	}
 
-/*.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
-}
-*/
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
+/* FLIP ANIMATION*/
+/*.card {
+  position: relative;
 
-/*	position: relative;*/
+  width: 561px;
+  height: 395px;
 }
 
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	/*position: absolute;
-	top: 0;
-	left: 0;*/
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-/* front pane, placed above back */
-.front {
-	/*z-index: 2;*/
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+.card__front,
+.card__back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.6s;
+          transition: transform 0.6s;
+
 }
 
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
+.card__front {
+  background-color: #ff5078;
+
 }
+
+.card__back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__hover:hover .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+
+}
+
+.card.effect__hover:hover .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+
+}
+
+.image.scene{
+	width: 561px;
+	height:395px;
+}*/
