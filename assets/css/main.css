@@ -1463,7 +1463,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3923,3 +3923,16 @@
 
 }
 */
+/*Contact form messages*/
+
+#form-messages{
+	font-size: 1em;
+}
+
+.success{
+ color:#2ecc71;
+}
+
+.error{
+	color:#e74c3c;
+}
