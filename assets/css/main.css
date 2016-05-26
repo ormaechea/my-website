@@ -2642,7 +2642,7 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
+			background-color: #3498db;
 			color: #c7ebe8;
 		}
 
@@ -2798,6 +2798,7 @@
 
 		.wrapper.style2 {
 			background-color: #2e3842;
+			opacity: 0.9;
 		}
 
 		.wrapper.style3 {
