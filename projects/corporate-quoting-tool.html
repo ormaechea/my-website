@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Corporate Quoting Platfrom | Andres Castillo Ormaechea</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+
+    <!-- Page Wrapper -->
+      <div id="page-wrapper">
+        <!-- Menu -->
+          <nav id="nav">
+              <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+              </ul>
+          </nav>
+
+        <!-- Main -->
+          <article id="main">
+            <header>
+              <h2>Projects</h2>
+              <p>Corporate Quoting Platform</p>
+            </header>
+            <section class="wrapper style5">
+              <div class="inner">
+                <div class="row">
+                  <div class="content">
+                      <h3>About:</h3>
+                      <p>A corporate quoting/budgeting platform for your business in real time. Keep all your clients, companies and products in one place. Send professional quotes from any place in the world to all your clients in any currency you need.</p>
+                      <h3>Technology stack:</h3>
+                        <div class="6u 12u$(medium)">
+                          <img  class="image fit" src="../images/projects/tech-stack-corporate-quoting-tool.png" alt="project-technologies-stack-corporate-quoting-tool">
+                        </div>
+                        <h3>Key Features:</h3>
+                        <ul>
+                          <li>Keep your business, clients, quotes/budgets in one place.</li>
+                          <li>Pick a currency and send professional quotes to clients in matter of seconds.</li>
+                          <li>Edit quotes on the fly to adjust them to the client needs.</li>
+                          <li>Monitor your monthly quotes with statistics and key performance indicators.</li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="content">
+                      <h3>Implementations:</h3>
+                      <h4>Fameworks and languages</h4>
+                      <ul>
+                        <li>Ruby version: 2.2.1</li>
+                        <li>Rails version: 4.2.3</li>
+                      </ul>
+                      <h4>Deployment Platform</h4>
+                      <p>Heroku was implemented for application deployment with two environments.</p>
+                      <p><strong>Development:</strong> all features before pushing live to production must be tested in the development environment.</p>
+                      <p><strong>Production:</strong> environment for the live application.</p>
+                      <h4>File uploads</h4>
+                      <p>File uploads is implemented with Carrierwave gem. When uploading files with the application deployed on Heroku the files are deleted everytime code gets pushed and when the dynos are restarted  (happens considerably). Amazon Web Services S3 is used for file storing so uploads dont get stored directly to Heroku.</p>
+                      <h4>User Roles & Authentication</h4>
+                      <p>Devise gem is used for User based role authentication with two main roles:</p>
+                      <ul>
+                        <li>Administrator</li>
+                        <li>User</li>
+                      </ul>
+                      <h4>Test Coverage</h4>
+                      <h4>Real time currency and price calculation</h4>
+                      <p>Fixer.io API implementation to retreive real time currency calculation.</p>
+                      <h4>PDF rendering</h4>
+                      <p>WickedPDF gem is used for PDF rendering. This technology is capable of rendering html templates with their stylesheets directly generating the PDF's.</p>
+                    </div>
+                  </div>
+
+
+
+              </div>
+            </section>
+          </article>
+
+        <!-- Footer -->
+          <footer id="footer">
+            <ul class="icons">
+
+              <li><a href="https://es.linkedin.com/in/andrescastillo1" class="icon fa-linkedin"><span class="label">Linked-in</span></a></li>
+              <li><a href="https://github.com/castilloandres" class="icon fa-github"><span class="label">Github</span></a></li>
+              <li><a href="https://instagram.com/andrescastillo.es" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+              <li><a href="mailto:andres@andrescastillo.es" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+              <li><a href="https://twitter.com/ndrscastillo" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            </ul>
+              <ul class="copyright">
+              <li>&copy; Andres Castillo Ormaechea</li>
+            </ul>
+
+          </footer>
+
+      </div>
+
+    <!-- Scripts -->
+      <script src="../assets/js/jquery.min.js"></script>
+      <script src="../assets/js/jquery.scrollex.min.js"></script>
+      <script src="../assets/js/jquery.scrolly.min.js"></script>
+      <script src="../assets/js/skel.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+      <script src="../assets/js/main.js"></script>
+
+  </body>
+</html>
