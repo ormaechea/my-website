@@ -34,34 +34,46 @@
               <div class="inner">
                 <div class="row">
                   <div class="content">
-                    <h3>About:</h3>
-                    <p>A corporate quoting/budgeting platform for your business in real time. Keep all your clients, companies and products in one place. Send professional quotes from any place in the world to all your clients in any currency you need.</p>
-                    <h3>Technology stack:</h3>
-                    <img class="image" src="">
-                  </div>
-                  </div>
-                  <div class="row">
-                    <div class="6u 12u$(medium)">
-                      <a href="" class="image left"><img src=""></a>
-                      <h2>iOS GIF Engine</h2>
-                      <p>Search and share GIFs with your friends!</p>
-                    </div>
-                    <div class="6u 12u$(medium)">
-                      <a href="" class="image left"><img src=""></a>
-                      <h2>Corporate Website</h2>
-                      <p>Corporate website for client.</p>
+                      <h3>About:</h3>
+                      <p>A corporate quoting/budgeting platform for your business in real time. Keep all your clients, companies and products in one place. Send professional quotes from any place in the world to all your clients in any currency you need.</p>
+                      <h3>Technology stack:</h3>
+                        <div class="6u 12u$(medium)">
+                          <img  class="image fit" src="../images/projects/tech-stack-corporate-quoting-tool.png" alt="project-technologies-stack-corporate-quoting-tool">
+                        </div>
+                        <h3>Key Features:</h3>
+                        <ul>
+                          <li>Keep your business, clients, quotes/budgets in one place.</li>
+                          <li>Pick a currency and send professional quotes to clients in matter of seconds.</li>
+                          <li>Edit quotes on the fly to adjust them to the client needs.</li>
+                          <li>Monitor your monthly quotes with statistics and key performance indicators.</li>
+                        </ul>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="6u 12u$(medium)">
-                      <a href="" class="image left"><img src=""></a>
-                      <h2>Vimeo Download Tool</h2>
-                      <p>Coming soon...</p>
-                    </div>
-                    <div class="6u 12u$(medium)">
-                      <a href="" class="image left"><img src=""></a>
-                      <h2>Our next project?</h2>
-                      <p>Get in touch!</p>
+                    <div class="content">
+                      <h3>Implementations:</h3>
+                      <h4>Fameworks and languages</h4>
+                      <ul>
+                        <li>Ruby version: 2.2.1</li>
+                        <li>Rails version: 4.2.3</li>
+                      </ul>
+                      <h4>Deployment Platform</h4>
+                      <p>Heroku was implemented for application deployment with two environments.</p>
+                      <p><strong>Development:</strong> all features before pushing live to production must be tested in the development environment.</p>
+                      <p><strong>Production:</strong> environment for the live application.</p>
+                      <h4>File uploads</h4>
+                      <p>File uploads is implemented with Carrierwave gem. When uploading files with the application deployed on Heroku the files are deleted everytime code gets pushed and when the dynos are restarted  (happens considerably). Amazon Web Services S3 is used for file storing so uploads dont get stored directly to Heroku.</p>
+                      <h4>User Roles & Authentication</h4>
+                      <p>Devise gem is used for User based role authentication with two main roles:</p>
+                      <ul>
+                        <li>Administrator</li>
+                        <li>User</li>
+                      </ul>
+                      <h4>Test Coverage</h4>
+                      <h4>Real time currency and price calculation</h4>
+                      <p>Fixer.io API implementation to retreive real time currency calculation.</p>
+                      <h4>PDF rendering</h4>
+                      <p>WickedPDF gem is used for PDF rendering. This technology is capable of rendering html templates with their stylesheets directly generating the PDF's.</p>
                     </div>
                   </div>
 
