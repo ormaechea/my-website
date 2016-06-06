@@ -34,51 +34,78 @@
               <div class="inner">
                 <div class="row">
                   <div class="content">
-                      <h3>About:</h3>
+                    <article>
+                      <h3 class="underline">About:</h3>
                       <p>A corporate and real time quoting/budgeting platform for your business. Keep all your clients, companies and products in one place. Send professional quotes from any place in the world to all your clients in any currency you need.</p>
-                      <h3>Technology stack:</h3>
+                    </article>
+                    <article>
+                      <h3 class="underline" >Technology stack:</h3>
                         <div class="6u 12u$(medium)">
                           <img  class="image fit" src="../images/projects/tech-stack-corporate-quoting-tool.png" alt="project-technologies-stack-corporate-quoting-tool">
                         </div>
-                        <h3>Key Features:</h3>
+                     </article>
+                     <article>
+                        <h3 class="underline" >Key Features:</h3>
                         <ul>
                           <li>Keep your business, clients, quotes/budgets in one place.</li>
                           <li>Pick a currency and send professional quotes to clients in matter of seconds.</li>
                           <li>Edit quotes on the fly to adjust them to the clients requirements.</li>
                           <li>Monitor your business performance with monthly quote statistics and key performance indicators.</li>
                         </ul>
+                     </article>
                     </div>
                   </div>
                   <div class="row">
                     <div class="content">
-                      <h4>Fameworks and languages</h4>
-                      <ul>
-                        <li>Ruby version: 2.2.1</li>
-                        <li>Rails version: 4.2.3</li>
-                      </ul>
-                      <h4>Deployment Platform</h4>
-                      <p>Heroku's platform is implemented for application deployment with two environments.</p>
-                      <p><strong>Development:</strong> where all features are tested before pushing to the production environment.</p>
-                      <p><strong>Production:</strong> where the live application is hosted.</p>
-                      <h4>File uploads</h4>
-                      <p>File uploads is implemented with Carrierwave gem. File uploads is not possible with Heroku since files are deleted everytime code gets pushed and the dynos are restarted (happens considerably).Amazon Web Services S3 is the approach used for storing file uploads.</p>
-                      <h4>User Roles & Authentication</h4>
-                      <p>Devise gem is used for role-based authentication with two main roles:</p>
-                      <ul>
-                        <li>Administrator</li>
-                        <li>User</li>
-                      </ul>
-                      <h4>Test Coverage</h4>
-                      <h5>• Feature Specs</h5>
-                      <p>Front end tests that go thru the main features of the application making sure all the parts work together. Capybara technology is used so that filling out forms and clicking around the application happens automatically.</p>
-                      <h5>• Model Specs</h5>
-                      <p>Model tests make sure that the base of the application (classes/models, methods, datatypes) and all objects can interact keeping the integrity of the system.</p>
-                      <h5>• Controller Specs</h5>
-                      <p>Controller specs speak for themeselves. They make sure all the applications logic works as expected. A good approach when reading an applications code base for the first time is to go first to the controller tests since they are very verbose and should give you a good picture of the purpose, function and expectancy of each controller.</p>
-                      <h4>Real time currency and price calculation</h4>
-                      <p>Fixer.io API implementation to retreive real time currency calculation.</p>
-                      <h4>PDF rendering</h4>
-                      <p>WickedPDF gem is used for PDF rendering. This technology is capable of rendering html templates with their stylesheets directly generating the PDF's.</p>
+                      <article>
+                        <h4 class="underline">Fameworks and languages</h4>
+                        <ul>
+                          <li>Ruby version: 2.2.1</li>
+                          <li>Rails version: 4.2.3</li>
+                        </ul>
+                      </article>
+                      <article>
+                        <h4 class="underline">Deployment Platform</h4>
+                        <p>Heroku's platform is implemented for application deployment with two environments.</p>
+                        <p><strong>Development:</strong> where all features are tested before pushing to the production environment.</p>
+                        <p><strong>Production:</strong> where the live application is hosted.</p>
+                      </article>
+                      <article>
+                        <h4 class="underline">File uploads</h4>
+                        <p>File uploads is implemented with Carrierwave gem. File uploads is not possible with Heroku since files are deleted everytime code gets pushed and the dynos are restarted (happens considerably).Amazon Web Services S3 is the approach used for storing file uploads.</p>
+                      </article>
+                      <article>
+                        <h4 class="underline" >User Roles & Authentication</h4>
+                        <p>Devise gem is used for role-based authentication with two main roles:</p>
+                        <ul>
+                          <li>Administrator</li>
+                          <li>User</li>
+                        </ul>
+                      </article>
+                      <article>
+                        <h4 class="underline" >Test Coverage</h4>
+                        <h5>• Feature Specs</h5>
+                        <p>Front end tests that go thru the main features of the application making sure all the parts work together. Capybara technology is used so that filling out forms and clicking around the application happens automatically.</p>
+                        <h5>• Model Specs</h5>
+                        <p>Model tests make sure that the base of the application (classes/models, methods, datatypes) and all objects can interact keeping the integrity of the system.</p>
+                        <h5>• Controller Specs</h5>
+                        <p>Controller specs speak for themeselves. They make sure all the applications logic works as expected. A good approach when reading an applications code base for the first time is to go first to the controller tests since they are very verbose and should give you a good picture of the purpose, function and expectancy of each controller.</p>
+                        <h5>• View Specs</h5>
+                        <p>Tests the display of information in the applications templates.</p>
+                        <h5>• Integration specs</h5>
+                        <p>Tests all the parts of the application that were integrated. For example API´s and other platform requests or dependencies.</p>
+                      </article>
+                      <article>
+                        <h4 class="underline" >Real time currency and price calculation</h4>
+                        <p>Fixer.io API implementation to retreive real time currency values and send up to date quotes with actual market prices.</p>
+                      </article>
+                      <article>
+                        <h4 class="underline" >PDF rendering</h4>
+                        <p>WickedPDF gem is used for PDF rendering. This technology is capable of rendering html templates and stylesheets making it possible to generate quotes in PDF format to send the most international version of documents to your clients.</p>
+                      </article>
+                      <article class="special">
+                        <a href="../contact.html" class="button">Project Demo Request credentials</a>
+                      </article>
                     </div>
                   </div>
 
