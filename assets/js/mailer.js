@@ -43,7 +43,7 @@ $(document).ready(function(){
         }else{
           $('#form-messages').removeClass('success');
           $('#form-messages').addClass('error');
-          $('#form-messages').text('Por favor complete el Captcha correctamente.');
+          $('#form-messages').text('Please complete the captcha correctly.');
 
         }
 
