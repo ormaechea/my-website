@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 
   // Get the form.
   var form = $('#ajax-contact');
@@ -12,62 +12,47 @@ $(document).ready(function(){
     e.preventDefault();
 
     // Serialize the form data.
-    var formData = $(form).serialize();
-
-    // Submit the form using AJAX.
+    //var formData = $(form).serialize();
+    console.log("JS form being serialized")
+     var formData = $(form).serialize();
+    //console.log(formData)
+        // Submit the form using AJAX.
     $.ajax({
       type: 'POST',
-      // url: $(form).attr('action'),
-      url: 'assets/php/recaptcha.php',
-      data: formData
+      url: $(form).attr('action'),
+      data: formData,
+      dataType:'HTML'
 
-     }).done(function(response){
-        console.log(response)
-        if(response == 'true'){
-          // Set the message text.
-            if ( $('#name').val() != "" && $('#email').val() != "" && $('#message').val() != ""){
-              $.ajax({
-                type: 'POST',
-                url: $(form).attr('action'),
-                data: formData
-                }).done(function(response){
-                  $(formMessages).text(response);
-                  // Set the message text color.
-                   $('#form-messages').removeClass('error');
-                   $('#form-messages').addClass('success');
-                  // Clear the form.
-                  $('#name').val('');
-                  $('#email').val('');
-                  $('#message').val('');
-                });
-            }else{
-               $('#form-messages').text('Por favor rellene el formulario completo.');
-            }
+    })
+    .done(function(response) {
+      // Make sure that the formMessages div has the 'success' class.
+      $(formMessages).removeClass('error');
+      $(formMessages).addClass('success');
 
-        }else{
-          $('#form-messages').removeClass('success');
-          $('#form-messages').addClass('error');
-          $('#form-messages').text('Por favor complete el Captcha correctamente.');
+      // Set the message text.
+      $(formMessages).text(response);
+      console.log("Succesful AJAX")
 
-        }
+      // Clear the form.
+      $('#name').val('');
+      $('#email').val('');
+      $('#message').val('');
+    })
+    .fail(function(data) {
+      // Make sure that the formMessages div has the 'error' class.
+      $(formMessages).removeClass('success');
+      $(formMessages).addClass('error');
+      console.log (data.responseText)
+      console.log("FAILED AJAX")
 
-     });
-
-
-
+      // Set the message text.
+      if (data.responseText !== '') {
+        $(formMessages).text(data.responseText);
+      } else {
+        $(formMessages).text('Oops! Ha ocurrido un error y su mensaje no ha sido enviado.');
+      }
+    });
 
   });
-  });
-    // .fail(function(data) {
-    //   // Make sure that the formMessages div has the 'error' class.
-    //   $(formMessages).removeClass('success');
-    //   $(formMessages).addClass('error');
 
-    //   // Set the message text.
-    //   if (data.responseText !== '') {
-    //     $(formMessages).text(data.responseText);
-    //   } else {
-    //     $(formMessages).text('Oops! An error occured and your message could not be sent.');
-    //   }
-    // });
-
+});
