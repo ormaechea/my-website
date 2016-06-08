@@ -4030,12 +4030,23 @@
 	font-size: 1em;
 }
 
-.success{
+/*.success{
  color:#2ecc71;
 }
 
 .error{
 	color:#e74c3c;
+}*/
+.success{
+  color:#29b865;
+}
+
+.error {
+  color:#eb4650;
+}
+
+#form-messages{
+  font-size: 1.5em;
 }
 
 .align-left{
