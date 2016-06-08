@@ -14,21 +14,12 @@ $(document).ready(function(){
     // Serialize the form data.
     var formData = $(form).serialize();
 
-    // Confirm it is not a robot calling the recaptcha script with AJAX.
-    $.ajax({
-      type: 'POST',
-      url: 'assets/php/recaptcha.php',
-      data: formData
-
-     }).done(function(response){
-        console.log(response)
-        if(response == 'true'){
-          // Get verification if it is a real person.
               $.ajax({
                 type: 'POST',
                 //Send the form calling mailer.php
-                url: $(form).attr('action'),
-                data: formData
+                url: 'assets/php/mailer.php',
+                data: formData,
+                dataType:'HTML'
                 }).done(function(response){
                   $(formMessages).text(response);
                   // Set the message text color.
@@ -40,30 +31,27 @@ $(document).ready(function(){
                   $('#message').val('');
                 })
 
-        }else{
-          $('#form-messages').removeClass('success');
-          $('#form-messages').addClass('error');
-          $('#form-messages').text('Please complete the captcha correctly.');
-
-        }
-
-     });
-
-
-
-
   });
   });
-    // .fail(function(data) {
-    //   // Make sure that the formMessages div has the 'error' class.
-    //   $(formMessages).removeClass('success');
-    //   $(formMessages).addClass('error');
 
-    //   // Set the message text.
-    //   if (data.responseText !== '') {
-    //     $(formMessages).text(data.responseText);
-    //   } else {
-    //     $(formMessages).text('Oops! An error occured and your message could not be sent.');
-    //   }
-    // });
+ //Rcaptcha AJAX call
+ // // Confirm it is not a robot calling the recaptcha script with AJAX.
+ //    $.ajax({
+ //      type: 'POST',
+ //      url: 'assets/php/recaptcha.php',
+ //      dataType:'HTML'
+ //     }).done(function(response){
+ //       // Get verification if it is a real person.
+ //       console.log(response)
+ //       if(response == 'true'){
 
+
+ //       }else{
+ //          $('#form-messages').removeClass('success');
+ //          $('#form-messages').addClass('error');
+ //          $('#form-messages').text('Please complete the captcha correctly.');
+
+ //        }
+
+
+ // });
