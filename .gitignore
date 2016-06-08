@@ -1,2 +1,5 @@
 # Ignore mailer script
 /assets/php/mailer.php
+
+# Ignore recaptcha script
+/assets/php/recaptcha.php
