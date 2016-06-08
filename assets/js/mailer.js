@@ -14,20 +14,19 @@ $(document).ready(function(){
     // Serialize the form data.
     var formData = $(form).serialize();
 
-    // Submit the form using AJAX.
+    // Confirm it is not a robot calling the recaptcha script with AJAX.
     $.ajax({
       type: 'POST',
-      // url: $(form).attr('action'),
       url: 'assets/php/recaptcha.php',
       data: formData
 
      }).done(function(response){
         console.log(response)
         if(response == 'true'){
-          // Set the message text.
-            if ( $('#name').val() != "" && $('#email').val() != "" && $('#message').val() != ""){
+          // Get verification if it is a real person.
               $.ajax({
                 type: 'POST',
+                //Send the form calling mailer.php
                 url: $(form).attr('action'),
                 data: formData
                 }).done(function(response){
@@ -39,15 +38,12 @@ $(document).ready(function(){
                   $('#name').val('');
                   $('#email').val('');
                   $('#message').val('');
-                });
-            }else{
-               $('#form-messages').text('Por favor rellene el formulario completo.');
-            }
+                })
 
         }else{
           $('#form-messages').removeClass('success');
           $('#form-messages').addClass('error');
-          $('#form-messages').text('Por favor complete el Captcha correctamente.');
+          $('#form-messages').text('Please complete the captcha correctly.');
 
         }
 
