@@ -4056,3 +4056,7 @@
 .underline{
 	text-decoration: underline;
 }
+
+.small-text{
+	font-size: 10px;
+}

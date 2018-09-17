@@ -3,3 +3,4 @@
 
 # Ignore recaptcha script
 /assets/php/recaptcha.php
+.DS_Store
